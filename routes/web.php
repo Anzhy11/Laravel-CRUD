@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// Add controller path
+use App\Http\Controllers\BasicController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+// Render the index page using a controller
+Route::get('/', [BasicController::class, 'index']);
+
+Route::get('/hello', function () {
+    return "Hello World!";
+});
+
+Route::get('/user/{id}', function ($id) {
+    return "Your ID is ".$id;
 });
