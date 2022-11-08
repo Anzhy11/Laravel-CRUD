@@ -6,7 +6,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Material Design for Bootstrap</title>
     <!-- MDB icon -->
-    <link rel="icon" href="{{ assets('public/bs/img/mdb-favicon.ico') }}" type="image/x-icon" />
+    <link rel="icon" href="{{ asset('public/bs/img/mdb-favicon.ico') }}" type="image/x-icon" />
     <!-- Font Awesome -->
     <link
       rel="stylesheet"
@@ -18,15 +18,19 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap"
     />
     <!-- MDB -->
-    <link rel="stylesheet" href="{{ assets('public/bs/css/mdb.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('bs/css/mdb.min.css') }}" />
   </head>
   <body>
     <!-- Start your project here-->
 
+    @include('layouts.navbar')
+    @yield('content')
+    @include('layouts.footer')
+
     <!-- End your project here-->
 
     <!-- MDB -->
-    <script type="text/javascript" src="{{ assets('public/bs/js/mdb.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('bs/js/mdb.min.js') }}"></script>
     <!-- Custom scripts -->
     <script type="text/javascript"></script>
   </body>
