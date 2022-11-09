@@ -18,8 +18,9 @@ use App\Http\Controllers\BasicController;
 // Render the index page using a controller and assigning a name to it
 Route::get('/', [BasicController::class, 'index'])->name('home');
 
-// create a form page
+// create a form page and submit it to the database
 Route::get('/create', [BasicController::class, 'create'])->name('create');
+Route::post('/create', [BasicController::class, 'store'])->name('store');
 
 Route::get('/hello', function () {
     return "Hello World!";
