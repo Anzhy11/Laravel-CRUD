@@ -15,8 +15,11 @@ use App\Http\Controllers\BasicController;
 |
 */
 
-// Render the index page using a controller
-Route::get('/', [BasicController::class, 'index']);
+// Render the index page using a controller and assigning a name to it
+Route::get('/', [BasicController::class, 'index'])->name('home');
+
+// create a form page
+Route::get('/create', [BasicController::class, 'create'])->name('create');
 
 Route::get('/hello', function () {
     return "Hello World!";

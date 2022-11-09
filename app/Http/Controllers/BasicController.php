@@ -13,4 +13,10 @@ class BasicController extends Controller
         return view('welcome');
     }
 
+    // form create method
+    public function create()
+    {
+        return view('create');
+    }
+
 }

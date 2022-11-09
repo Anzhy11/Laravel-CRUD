@@ -14,8 +14,9 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
+        <!-- Added page links to the navbar -->
+        <a class="nav-link active" aria-current="page" href="{{ url('/') }}">Home</a>
+        <a class="nav-link" href="{{ url('/create') }}">Add New</a>
       </div>
     </div>
   </div>
