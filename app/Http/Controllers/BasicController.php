@@ -11,7 +11,8 @@ class BasicController extends Controller
     //index method
     public function index()
     {
-        return view('welcome');
+        $basics = Basic::all(); //pull all data from basic database and pass it to home
+        return view('welcome', compact('basics'));
     }
 
     // form create method
