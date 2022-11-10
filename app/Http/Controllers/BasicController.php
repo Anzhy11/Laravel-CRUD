@@ -71,4 +71,11 @@ class BasicController extends Controller
             return redirect(route('home'))->with('successMsg','Student Successfully Updated');
     }
 
+    // Delete method
+    public function delete($id)
+    {
+        Basic::find($id)->delete();
+        return redirect(route('home'))->with('successMsg','Student Deleted Successfully');
+    }
+
 }

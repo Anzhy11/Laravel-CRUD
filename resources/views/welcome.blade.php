@@ -36,7 +36,21 @@
         <td> 
           <a class="btn btn-raised btn-dark btn-sm" href="{{ route('edit', $basic->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
           ||
-          <a class="btn btn-raised btn-danger btn-sm" href=""><i class="fa fa-trash" aria-hidden="true"></i></i></a>
+          <!-- Delete data -->
+          <form method="POST" id="delete-form{{ $basic->id }}" action="{{ route('delete', $basic->id) }}" style="display: none;">
+            {{ csrf_field() }}
+            {{ method_field('delete') }}
+          </form>
+
+          <!-- confirmation popup -->
+          <button onclick="if (confirm('Do you want to delete this data?')) {
+            event.preventDefault();
+            document.getElementById('delete-form{{ $basic->id }}').submit();
+          }else {
+            event.preventDefault();
+          }
+          " class="btn btn-raised btn-danger btn-sm" href=""><i class="fa fa-trash" aria-hidden="true"></i>
+          </button>
         </td>
       </tr>
     @endforeach

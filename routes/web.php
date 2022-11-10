@@ -25,6 +25,7 @@ Route::post('/create', [BasicController::class, 'store'])->name('store');
 // Manipulate database data values
 Route::get('/edit/{id}', [BasicController::class, 'edit'])->name('edit');
 Route::post('/update/{id}', [BasicController::class, 'update'])->name('update');
+Route::delete('/delete/{id}', [BasicController::class, 'delete'])->name('delete');
 
 Route::get('/hello', function () {
     return "Hello World!";
