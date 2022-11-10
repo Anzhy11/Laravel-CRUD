@@ -33,7 +33,11 @@
         <td>{{ $basic->last_name }}</td>
         <td>{{ $basic->email }}</td>
         <td>{{ $basic->phone }}</td>
-        <td>edit || delete</td>
+        <td> 
+          <a class="btn btn-raised btn-dark btn-sm" href="{{ route('edit', $basic->id) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+          ||
+          <a class="btn btn-raised btn-danger btn-sm" href=""><i class="fa fa-trash" aria-hidden="true"></i></i></a>
+        </td>
       </tr>
     @endforeach
   </tbody>
