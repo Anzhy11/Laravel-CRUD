@@ -56,6 +56,9 @@
     @endforeach
   </tbody>
 </table>
+
+<!-- show pagination -->
+<!-- {{ $basics->links() }} -->
 </div>
 
 @endsection

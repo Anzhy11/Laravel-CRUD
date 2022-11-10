@@ -11,7 +11,9 @@ class BasicController extends Controller
     //index method
     public function index()
     {
-        $basics = Basic::all(); //pull all data from basic database and save it to basics
+        //pull all data from basic database and save it to basics
+        //and paginate to 5 rows
+        $basics = Basic::paginate(5);
         return view('welcome', compact('basics')); // pass the values to welcome page
     }
 
